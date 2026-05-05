@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { width: 1500px; height: 500px; overflow: hidden; }
+  html, body { width: 100%; height: 100%; overflow: hidden; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
     background: radial-gradient(ellipse at 18% 50%, #00566f 0%, #003c5a 35%, #00253a 70%, #001a28 100%);
@@ -53,7 +53,8 @@
 
   .right {
     flex: 1;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,11 +64,12 @@
     display: block;
     white-space: nowrap;
     font-family: 'SF Mono', Menlo, Consolas, monospace;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.4;
+    letter-spacing: -0.025em;
     color: rgba(255, 255, 255, 0.96);
   }
-  .typed strong { font-weight: 600; color: #00f0f0; }
+  .typed strong { font-weight: 600; color: #00f0f0; letter-spacing: -0.01em; }
   .caret {
     display: inline-block;
     width: 3px; height: 1em;
@@ -79,12 +81,13 @@
   @keyframes blink { 50% { opacity: 0; } }
 
   .usp {
-    font-family: 'Newsreader', Georgia, serif;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 22px;
-    color: rgba(255, 255, 255, 0.78);
-    font-style: italic;
-    letter-spacing: 0.01em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.02em;
   }
+  .usp strong { font-weight: 500; color: rgba(255, 255, 255, 0.96); }
 
   .brand {
     position: absolute;
@@ -99,11 +102,11 @@
 
   .word-mark {
     position: absolute;
-    top: 38px; right: 60px;
+    top: 36px; right: 56px;
     font-family: 'Newsreader', 'SF Pro Display', Georgia, serif;
-    font-size: 44px;
+    font-size: 38px;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     color: rgba(255, 255, 255, 0.96);
   }
 </style>
@@ -131,7 +134,7 @@
 
   <div class="right">
     <div class="typed">Der <strong>Pull&nbsp;Request</strong> muss noch reviewed werden.<span class="caret"></span></div>
-    <div class="usp">Lokal. Bilingual. Offline. — auf Apple Silicon.</div>
+    <div class="usp"><strong>Lokal · Bilingual · Offline.</strong> &nbsp; Whisper auf Apple Silicon.</div>
   </div>
 
   <div class="word-mark">Mundwerk</div>
