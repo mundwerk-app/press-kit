@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1128px; height: 191px; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    background: radial-gradient(ellipse at 18% 50%, #00566f 0%, #003c5a 35%, #00253a 70%, #001a28 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+  }
+
+  .left { flex: 0 0 320px; display: flex; align-items: center; justify-content: center; }
+
+  .waveform { display: flex; align-items: center; gap: 4px; height: 80px; }
+  .bar {
+    width: 5px;
+    background: linear-gradient(180deg, #00f0f0 0%, #00c0e8 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 224, 240, 0.55);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  .bar:nth-child(1)  { height: 18%; animation-delay: 0.0s; }
+  .bar:nth-child(2)  { height: 34%; animation-delay: 0.05s; }
+  .bar:nth-child(3)  { height: 50%; animation-delay: 0.10s; }
+  .bar:nth-child(4)  { height: 72%; animation-delay: 0.15s; }
+  .bar:nth-child(5)  { height: 95%; animation-delay: 0.20s; }
+  .bar:nth-child(6)  { height: 70%; animation-delay: 0.25s; }
+  .bar:nth-child(7)  { height: 88%; animation-delay: 0.30s; }
+  .bar:nth-child(8)  { height: 55%; animation-delay: 0.35s; }
+  .bar:nth-child(9)  { height: 78%; animation-delay: 0.40s; }
+  .bar:nth-child(10) { height: 92%; animation-delay: 0.45s; }
+  .bar:nth-child(11) { height: 60%; animation-delay: 0.50s; }
+  .bar:nth-child(12) { height: 40%; animation-delay: 0.55s; }
+  .bar:nth-child(13) { height: 65%; animation-delay: 0.60s; }
+  .bar:nth-child(14) { height: 82%; animation-delay: 0.65s; }
+  .bar:nth-child(15) { height: 48%; animation-delay: 0.70s; }
+  .bar:nth-child(16) { height: 30%; animation-delay: 0.75s; }
+  .bar:nth-child(17) { height: 58%; animation-delay: 0.80s; }
+  .bar:nth-child(18) { height: 22%; animation-delay: 0.85s; }
+  .bar:nth-child(19) { height: 14%; animation-delay: 0.90s; }
+  .bar:nth-child(20) { height: 8%;  animation-delay: 0.95s; }
+
+  @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+  .arrow { flex: 0 0 60px; display: flex; align-items: center; justify-content: center; }
+  .arrow-svg { width: 50px; height: 24px; opacity: 0.85; }
+
+  .right {
+    flex: 1;
+    padding-left: 30px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 17px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.96);
+  }
+  .typed { display: block; white-space: nowrap; }
+  .typed strong { font-weight: 600; color: #00f0f0; }
+  .caret {
+    display: inline-block;
+    width: 2px; height: 1em;
+    background: #fff;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .brand {
+    position: absolute;
+    bottom: 14px; right: 28px;
+    font-family: 'SF Pro Display', -apple-system, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.78);
+    font-style: italic;
+  }
+  .brand .heart { color: #fda4af; font-style: normal; }
+
+  .word-mark {
+    position: absolute;
+    top: 18px; right: 28px;
+    font-family: 'Newsreader', 'SF Pro Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.94);
+  }
+</style>
+</head>
+<body>
+
+  <div class="left">
+    <div class="waveform" aria-label="Audio waveform">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <svg class="arrow-svg" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 12 H44" stroke="#00e0f0" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>
+      <path d="M38 5 L48 12 L38 19" stroke="#00e0f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+    </svg>
+  </div>
+
+  <div class="right">
+    <span class="typed">Der <strong>Pull&nbsp;Request</strong> muss noch reviewed werden.<span class="caret"></span></span>
+  </div>
+
+  <div class="word-mark">Mundwerk</div>
+  <div class="brand">Made with <span class="heart">♥︎</span> in Unterhaching</div>
+
+</body>
+</html>
